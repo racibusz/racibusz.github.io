@@ -1,0 +1,42 @@
+
+
+
+import { motion } from "framer-motion";
+import CodeBackground from "../components/CodeBackground";
+
+const Main = () => {
+    return (
+        <div className="text-light fullScreen container-fluid 
+relative bg-dark" style={{ position: "relative" }}>
+            <CodeBackground />
+
+            <motion.div
+                className="row py-5 px-4"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                style={{ position: "relative", zIndex: 2 }}
+            >
+                <div className="col-md-8 d-flex align-items-center">
+                    <h1 className="text-center">Pomagam firmom
+ wyróżnić się w internecie!</h1>
+                </div>
+                <div className="col-md-4 align-middle">
+                    <img src="/laptop.png" style={{ width: "100%",
+ height: "100%" }} alt="Laptop" />
+                </div>
+                <motion.div className="col-md-12 text-center">
+                    <button
+                        className="btn btn-outline-light"
+                        style={{ fontSize: "1.25rem",
+ padding: "0.75rem 1.5rem" }}
+                    >
+                        Dowiedz się więcej
+                    </button>
+                </motion.div>
+            </motion.div>
+        </div>
+    );
+};
+
+export default Main;
